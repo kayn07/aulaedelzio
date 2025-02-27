@@ -1,0 +1,245 @@
+
+body {
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+/*btn-inicio*/
+.botao-configuracoes {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  background-color: #6200ea;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.3s;
+  align-items: center;
+}
+
+.botao-configuracoes:hover {
+  background-color: #6200ea; /* Cor sólida ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento de tamanho */
+}
+
+.botao-configuracoes .icone {
+  margin-right: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #6200ea; /* fundo das letras */
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2); /* ao lado das opções */
+  z-index: 1;
+  min-width: 160px;
+  top: 40px;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255); /* letras */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #640fda; /* passando o mouse nas opções */
+}
+
+.botao-configuracoes:hover .dropdown-content {
+  display: block;
+}
+/*btn-fim*/
+
+/*tema_inicio*/
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #333;
+}
+body.dark-mode {
+  background-color: #333;
+  color: #f0f0f0;
+}
+.icone {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+.fa-sun, .fa-moon {
+  margin-right: 10px;
+}
+/*tema_fim*/
+
+/*text-inicio*/
+.center-text {
+  text-align: left;
+  /*caso queira colocar o texto mais para baixo use "display: flex;"*/
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 60px); /*Assumindo que a altura da navbar é 60px*/
+  margin: auto;
+}
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 60px; /*Compensar a altura da navbar*/
+}
+/*text-fim*/
+
+
+
+*-----------------------------------------------------------------------------------*/
+ 
+ /* Animação para os cards */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px; /* Cards mais largos e maiores */
+    margin: 0 auto 15px; /* Menos margem entre os cards */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Rodapé */
+footer {
+    background-color: black;
+    color: white;
+}
+
+/* Ajustar tamanho das imagens */
+.card-img-top {
+    object-fit: cover;
+    height: 400px; /* Deixar as imagens mais altas */
+    width: 100%; /* Ajustar a largura das imagens */
+}
+
+/* Estilo para a barra de pesquisa */
+.search-bar {
+    
+    max-width: 300px; /* Barra de pesquisa maior */
+    border-radius: 25px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: 2px solid #191c1f; /* Borda azul */
+    background-color: #f8f9fa; /* Cor de fundo clara */
+    color: #333; /* Cor do texto */
+}
+
+.search-bar::placeholder {
+    color: #999; /* Cor do placeholder */
+}
+
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search-container .input-group {
+    width: 500px;
+}
+
+.product-card {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ajustar o ícone da lupa */
+.input-group-text {
+    background-color: #191c1f;
+    color: white;
+    border-radius: 25px; /* Bordas arredondadas */
+    border: 2px solid #191c1f; /* Borda azul */
+}
+
+/* Estilo para o título do card */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Estilo para o texto do card */
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Estilo para o botão */
+.btn-primary {
+    background-color: #0056b3;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #004494;
+}
+
+.btn-toolbar {
+  justify-content: center;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+/*btn_tema_inicio*/
+
+.theme-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #8A2BE2;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-button:hover {
+    background-color: #6a1fa2; /* Cor mais escura ao passar o mouse */
+  }
+  
+  /* Tema claro */
+  body.light-theme {
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  header.light-theme, nav.light-theme {
+    background-color: #fff;
+    border-color: #8A2BE2;
+  }
+  
+  .menu a.light-theme {
+    color: #333;
+  }
+  
+  /* Tema escuro */
+  body.dark-theme {
+    background-color: #000000;
+    color: #fff;
+  }
+  
+  header.dark-theme, nav.dark-theme {
+    background-color: #444;
+    border-color: #ff5722;
+  }
+  
+  .menu a.dark-theme {
+    color: #fff;
+  }
+  /*btn_tema_fim*/
